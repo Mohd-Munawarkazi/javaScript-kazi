@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind method</title>
+</head>
+<body>
+    <h1>Bind method</h1>
+    <p>  <span style="color: red;"> What is Bind method in JavaScript?</span><br>
+        The bind() method allows an object to borrow a method from another object without making a copy of that method. This is known as function borrowing in JavaScript.</p>
+        <p> <span style="color: red;"> Why do we use the bind method?</span>   
+            We use the Bind() method to call a function with the this value, 
+            this keyword refers to the same object which is currently selected . 
+            In other words, bind() method allows us to easily set which object will be bound by 
+            the this keyword when a function or method is invoked.</p>
+    <script>
+        const person={
+            name:"Ayaan kazi",
+            age:25,
+            city:"Nanded",
+            feature:function(planename,feel){
+
+                    console.log(`hello and welcome to my sky world i'm ${this.name} i'm ${this.age} old ....🧑‍✈️  ${planename} we assure your journey is ${feel}`)
+            }
+        }
+        // person.feature("AirIndia","good");
+
+        
+
+
+    let perSon2=person.feature.bind(person)
+     perSon2("Indigo","comfort")
+
+    </script>
+</body>
+</html>
